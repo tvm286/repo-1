@@ -1,0 +1,20 @@
+name: Team Hexa CI
+
+on:
+  push:
+    branches:
+      - TEAM-1-notification-preferences
+  pull_request:
+    branches:
+      - TEAM-1-notification-preferences
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Run CI check
+        run: echo "Team Hexa CI pipeline completed successfully"
